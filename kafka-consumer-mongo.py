@@ -8,7 +8,7 @@ from pymongo.server_api import ServerApi
 
 import json
 
-uri = "mongodb+srv://alexandrubites:IUMD6wqtYGbVh0yw@cluster0.z4xurdo.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://alexandrubites:IrvingConde@centeno.naivyqx.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 # client = MongoClient(uri, server_api=ServerApi('1'))
@@ -34,7 +34,7 @@ except:
 
 
 consumer = KafkaConsumer('reactions', bootstrap_servers=[
-' my-kafka-0.my-kafka-headless.alexandrubites.svc.cluster.local:9092'])
+'my-kafka-0.my-kafka-headless.alexandrubites.svc.cluster.local:9092'])
 # Parse received data from Kafka
 for msg in consumer:
     record = json.loads(msg.value)
